@@ -31,8 +31,8 @@ machine-learning-handbook/
 
 | # | Notebook | Status | Topics Covered | Kaggle Link |
 |---|----------|--------|----------------|-------------|
-| **0** | **Setup & Standards** | ✅ Complete | Environment configuration, random seeds, utility functions, reproducibility standards | [View on Kaggle](your-notebook-0-link) |
-| **1** | **ML Foundations** | ✅ Complete | What is ML, supervised/unsupervised learning, training vs inference, loss functions, bias-variance tradeoff, curse of dimensionality, No Free Lunch theorem | [View on Kaggle](your-notebook-1-link) |
+| **0** | **Setup & Standards** | ✅ Complete | Environment configuration, random seeds, utility functions, reproducibility standards | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/00-setup-and-standards) |
+| **1** | **ML Foundations** | ✅ Complete | What is ML, supervised/unsupervised learning, training vs inference, loss functions, bias-variance tradeoff, curse of dimensionality, No Free Lunch theorem | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/01-ml-foundations) |
 | **2** | **Data Mastery** | ⏳ Planned | EDA techniques, missing value handling (MCAR/MAR/MNAR), outlier detection, encoding strategies, feature scaling, feature engineering, data leakage prevention | - |
 | **3** | **Regression Models** | ⏳ Planned | Linear Regression, Ridge, Lasso, ElasticNet, Decision Trees, Random Forest, Gradient Boosting (XGBoost/LightGBM/CatBoost), model comparison | - |
 | **4** | **Classification Models** | ⏳ Planned | Logistic Regression, Naive Bayes, kNN, SVM, tree-based methods, ensemble classifiers, evaluation metrics (ROC-AUC, precision-recall), class imbalance handling | - |
