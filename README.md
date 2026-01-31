@@ -16,7 +16,7 @@ machine-learning-handbook/
 │   ├── 00-Setup-and-Standards.ipynb                      ✅ Complete
 │   ├── 01-ML-Foundations.ipynb                           ✅ Complete
 │   ├── 02-Data-Mastery-EDA-and-Preprocessing.ipynb       ✅ Complete
-│   ├── 03-Regression-Models.ipynb                        ⏳ Planned
+│   ├── 03-Regression-Models.ipynb                        ✅ Complete
 │   ├── 04-Classification-Models.ipynb                    ⏳ Planned
 │   └── 05-Advanced-ML.ipynb                              ⏳ Planned
 ├── utils/
@@ -34,7 +34,7 @@ machine-learning-handbook/
 | **0** | **Setup & Standards** | ✅ Complete | Environment configuration, random seeds, utility functions, reproducibility standards | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/00-setup-and-standards) |
 | **1** | **ML Foundations** | ✅ Complete | What is ML, supervised/unsupervised learning, training vs inference, loss functions, bias-variance tradeoff, curse of dimensionality, No Free Lunch theorem | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/01-ml-foundations) |
 | **2** | **Data Mastery: EDA and Preprocessing** | ✅ Complete | EDA techniques, missing value handling (MCAR/MAR/MNAR), outlier detection, encoding strategies, feature scaling, feature engineering, data leakage prevention | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/02-data-mastery-eda-and-preprocessing) |
-| **3** | **Regression Models** | ⏳ Planned | Linear Regression, Ridge, Lasso, ElasticNet, Decision Trees, Random Forest, Gradient Boosting (XGBoost/LightGBM/CatBoost), model comparison | - |
+| **3** | **Regression Models** | ✅ Complete | Linear Regression, Ridge, Lasso, ElasticNet, Decision Trees, Random Forest, Gradient Boosting (XGBoost/LightGBM/CatBoost), hyperparameter tuning, feature importance, model comparison | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/03-regression-models) |
 | **4** | **Classification Models** | ⏳ Planned | Logistic Regression, Naive Bayes, kNN, SVM, tree-based methods, ensemble classifiers, evaluation metrics (ROC-AUC, precision-recall), class imbalance handling | - |
 | **5** | **Advanced ML** | ⏳ Planned | Unsupervised learning (k-Means, DBSCAN, hierarchical clustering), dimensionality reduction (PCA, t-SNE, UMAP), ensemble methods, model interpretability (SHAP, LIME), production considerations | - |
 
@@ -112,7 +112,7 @@ jupyter notebook notebooks/
 
 ## 📊 Current Status
 
-### ✅ Completed (3/6 notebooks)
+### ✅ Completed (4/6 notebooks)
 
 **Notebook 0: Setup & Standards**
 - Reproducibility configuration
@@ -125,7 +125,7 @@ jupyter notebook notebooks/
 - 15+ visualizations
 - Topics: ML types, training vs inference, loss functions, bias-variance tradeoff, curse of dimensionality, No Free Lunch theorem
 
-**Notebook 2: Data Mastery - EDA and Preprocessing** ⭐ *Latest*
+**Notebook 2: Data Mastery - EDA and Preprocessing**
 - **10 comprehensive sections** covering the complete data preprocessing pipeline from raw data to model-ready datasets
 - **35+ hands-on code examples** demonstrating real-world data transformation techniques
 - **Extensive EDA coverage:** Univariate analysis (distributions, statistics, outliers), bivariate analysis (correlations, scatter plots, feature-target relationships), multivariate analysis (feature interactions, dimensionality insights)
@@ -136,11 +136,27 @@ jupyter notebook notebooks/
 - **Feature engineering mastery:** Creating interaction features, polynomial features, domain-specific features, binning strategies, feature extraction techniques
 - **Data leakage prevention:** Understanding train-test contamination, proper cross-validation practices, avoiding target leakage, time-series specific considerations
 - **Production-ready pipeline:** Step-by-step workflow from raw data to clean dataset, sklearn Pipeline integration, reproducible preprocessing with proper train-test split timing
+
+**Notebook 3: All Regression Models Explained & Compared** ⭐ *Latest*
+- **13 comprehensive sections** covering all major regression algorithms from linear models to advanced gradient boosting
+- **50+ code demonstrations** with hands-on implementation of every model type
+- **Linear Models Deep Dive:** Simple linear regression with OLS derivation, multiple linear regression with multicollinearity (VIF) analysis, Ridge (L2), Lasso (L1), and ElasticNet regularization with mathematical foundations
+- **Decision Tree Regression:** Tree building algorithm (CART), overfitting demonstration across depths, hyperparameter tuning (max_depth, min_samples_split), feature importance extraction, visualization of decision rules
+- **Random Forest Excellence:** Bootstrap aggregating (bagging) explained, out-of-bag (OOB) scoring, impact of n_estimators on performance, ensemble averaging for variance reduction, comparison with single decision trees
+- **Gradient Boosting Fundamentals:** Sequential learning process, residual-based training, learning rate vs n_estimators trade-off, early stopping strategies, staged predictions and learning curves
+- **Advanced Boosting Implementations:** XGBoost with regularization (L1/L2/gamma), LightGBM with histogram-based learning and leaf-wise growth, CatBoost with ordered target encoding, GPU acceleration options
+- **Comprehensive Model Evaluation:** Multiple metrics (MSE, RMSE, MAE, R², MAPE, Adjusted R²), 5-fold cross-validation for all models, residual analysis with diagnostic plots (Q-Q plots, scale-location, heteroscedasticity checks), learning curves for bias-variance diagnosis
+- **Hyperparameter Tuning Mastery:** Random Search with 50+ combinations, focused Grid Search refinement, validation curves for single parameters, early stopping implementation, parameter importance ranking
+- **Feature Importance Analysis:** Tree-based importance (Gini/Gain), permutation importance (model-agnostic), SHAP values for game-theoretic explanations (when compatible), partial dependence plots (PDPs) for feature effects, consensus importance across methods
+- **Model Comparison:** 12 models trained and compared (Simple LR, Multiple LR, Ridge, Lasso, ElasticNet, Decision Tree, Random Forest, GBM, XGBoost, XGBoost-Tuned, LightGBM, CatBoost), performance leaderboard with statistical significance, complexity vs interpretability trade-offs
+- **Production Deployment Ready:** Model serialization (joblib), scaler and feature name preservation, metadata documentation (JSON), production inference code template, deployment checklist, monitoring recommendations
+- **Key Results:** XGBoost (Tuned) achieved best performance (RMSE: $27,230, R²: 0.9033), Simple Linear Regression surprisingly competitive (4th place!), 6.15% improvement over baseline, comprehensive model selection guide
+
 ### 🔄 In Progress
 
-**Notebook 3: Regression Models** (Next up)
+**Notebook 4: Classification Models** (Next up)
 - Expected completion: February 2026
-- Focus: Linear models, tree-based regression, and ensemble methods
+- Focus: Binary and multi-class classification algorithms
 
 ---
 
@@ -164,13 +180,13 @@ Notebook 1: ML Foundations (2-3 hours)
     ↓
 Notebook 2: Data Mastery (3-4 hours)
     ↓
-Notebook 3: Regression Models (3-4 hours)
+Notebook 3: Regression Models (4-6 hours)
     ↓
 Notebook 4: Classification Models (3-4 hours)
     ↓
 Notebook 5: Advanced ML (4-5 hours)
     ↓
-Total Time: ~20-25 hours of deep learning
+Total Time: ~20-28 hours of deep learning
 ```
 
 **Recommendation:** Complete one notebook per week for thorough understanding.
@@ -191,8 +207,9 @@ Total Time: ~20-25 hours of deep learning
 
 | Date | Update |
 |------|--------|
-| **January 31, 2026** | ✅ Completed Notebook 2: Data Mastery - EDA and Preprocessing (8 sections, 20+ demonstrations) |
-| **January 30, 2026** | ✅ Completed Notebook 1: ML Foundations (11 sections, 15 visualizations) |
+| **January 31, 2026** | ✅ Completed Notebook 3: All Regression Models (13 sections, 50+ demonstrations, 12 models compared) |
+| **January 30, 2026** | ✅ Completed Notebook 2: Data Mastery - EDA and Preprocessing (10 sections, 35+ demonstrations) |
+| **January 29, 2026** | ✅ Completed Notebook 1: ML Foundations (11 sections, 15 visualizations) |
 | **January 28, 2026** | ✅ Completed Notebook 0: Setup & Standards |
 | **January 25, 2026** | 🎉 Repository initialized |
 
@@ -209,7 +226,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Built with inspiration from:
 - "The Elements of Statistical Learning" - Hastie, Tibshirani, Friedman
 - "Hands-On Machine Learning" - Aurélien Géron
+- "Applied Predictive Modeling" - Kuhn & Johnson
 - Scikit-learn documentation and examples
+- XGBoost, LightGBM, and CatBoost official documentation
 - Kaggle community notebooks
 
 ---
@@ -220,7 +239,7 @@ Built with inspiration from:
 
 *From Zero to Production-Ready ML Skills*
 
-**Last Updated:** January 31, 2026 | **Status:** 3/6 Notebooks Complete
+**Last Updated:** January 31, 2026 | **Status:** 4/6 Notebooks Complete
 
 [View Notebooks](./notebooks/) • [Report Issue](https://github.com/haticebaydemir/ml-master-handbook/issues) • [Star ⭐](https://github.com/haticebaydemir/ml-master-handbook)
 
