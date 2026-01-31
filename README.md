@@ -13,14 +13,14 @@
 ```
 machine-learning-handbook/
 ├── notebooks/
-│   ├── 00-Setup-and-Standards.ipynb          ✅ Complete
-│   ├── 01-ML-Foundations.ipynb               ✅ Complete
-│   ├── 02-Data-Mastery.ipynb                 ⏳ Planned
-│   ├── 03-Regression-Models.ipynb            ⏳ Planned
-│   ├── 04-Classification-Models.ipynb        ⏳ Planned
-│   └── 05-Advanced-ML.ipynb                  ⏳ Planned
+│   ├── 00-Setup-and-Standards.ipynb                      ✅ Complete
+│   ├── 01-ML-Foundations.ipynb                           ✅ Complete
+│   ├── 02-Data-Mastery-EDA-and-Preprocessing.ipynb       ✅ Complete
+│   ├── 03-Regression-Models.ipynb                        ⏳ Planned
+│   ├── 04-Classification-Models.ipynb                    ⏳ Planned
+│   └── 05-Advanced-ML.ipynb                              ⏳ Planned
 ├── utils/
-│   └── utils.py                              ✅ Complete
+│   └── utils.py                                          ✅ Complete
 ├── README.md
 └── .gitignore
 ```
@@ -33,7 +33,7 @@ machine-learning-handbook/
 |---|----------|--------|----------------|-------------|
 | **0** | **Setup & Standards** | ✅ Complete | Environment configuration, random seeds, utility functions, reproducibility standards | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/00-setup-and-standards) |
 | **1** | **ML Foundations** | ✅ Complete | What is ML, supervised/unsupervised learning, training vs inference, loss functions, bias-variance tradeoff, curse of dimensionality, No Free Lunch theorem | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/01-ml-foundations) |
-| **2** | **Data Mastery** | ⏳ Planned | EDA techniques, missing value handling (MCAR/MAR/MNAR), outlier detection, encoding strategies, feature scaling, feature engineering, data leakage prevention | - |
+| **2** | **Data Mastery: EDA and Preprocessing** | ✅ Complete | EDA techniques, missing value handling (MCAR/MAR/MNAR), outlier detection, encoding strategies, feature scaling, feature engineering, data leakage prevention | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/02-data-mastery-eda-and-preprocessing) |
 | **3** | **Regression Models** | ⏳ Planned | Linear Regression, Ridge, Lasso, ElasticNet, Decision Trees, Random Forest, Gradient Boosting (XGBoost/LightGBM/CatBoost), model comparison | - |
 | **4** | **Classification Models** | ⏳ Planned | Logistic Regression, Naive Bayes, kNN, SVM, tree-based methods, ensemble classifiers, evaluation metrics (ROC-AUC, precision-recall), class imbalance handling | - |
 | **5** | **Advanced ML** | ⏳ Planned | Unsupervised learning (k-Means, DBSCAN, hierarchical clustering), dimensionality reduction (PCA, t-SNE, UMAP), ensemble methods, model interpretability (SHAP, LIME), production considerations | - |
@@ -98,7 +98,7 @@ Browse the [`/notebooks/`](./notebooks/) directory to see fully executed noteboo
 ### Option 3: Run Locally
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/ml-master-handbook.git
+git clone https://github.com/haticebaydemir/ml-master-handbook.git
 cd ml-master-handbook
 
 # Install dependencies
@@ -112,24 +112,35 @@ jupyter notebook notebooks/
 
 ## 📊 Current Status
 
-### ✅ Completed (2/5 notebooks)
+### ✅ Completed (3/6 notebooks)
 
 **Notebook 0: Setup & Standards**
 - Reproducibility configuration
 - Utility function library
 - Plotting standards
 
-**Notebook 1: ML Foundations** ⭐ *Latest*
+**Notebook 1: ML Foundations**
 - 11 major sections
 - 15 code demonstrations
 - 15+ visualizations
 - Topics: ML types, training vs inference, loss functions, bias-variance tradeoff, curse of dimensionality, No Free Lunch theorem
 
+**Notebook 2: Data Mastery - EDA and Preprocessing** ⭐ *Latest*
+- **10 comprehensive sections** covering the complete data preprocessing pipeline from raw data to model-ready datasets
+- **35+ hands-on code examples** demonstrating real-world data transformation techniques
+- **Extensive EDA coverage:** Univariate analysis (distributions, statistics, outliers), bivariate analysis (correlations, scatter plots, feature-target relationships), multivariate analysis (feature interactions, dimensionality insights)
+- **Advanced missing value strategies:** Understanding MCAR/MAR/MNAR mechanisms, multiple imputation methods (mean/median, mode, forward/backward fill, KNN, iterative imputation), missing indicator features
+- **Comprehensive outlier detection:** Statistical methods (Z-score, IQR, Modified Z-score), visual detection (box plots, scatter plots, histograms), treatment strategies (removal, winsorization, transformation, robust models)
+- **Complete categorical encoding guide:** Label encoding for ordinal features, one-hot encoding with dummy trap avoidance, target encoding with leakage prevention, frequency encoding, binary encoding for high cardinality
+- **Feature scaling deep dive:** Standardization (Z-score), Min-Max normalization, Robust scaling for outliers, when to scale vs when not to, algorithm-specific recommendations
+- **Feature engineering mastery:** Creating interaction features, polynomial features, domain-specific features, binning strategies, feature extraction techniques
+- **Data leakage prevention:** Understanding train-test contamination, proper cross-validation practices, avoiding target leakage, time-series specific considerations
+- **Production-ready pipeline:** Step-by-step workflow from raw data to clean dataset, sklearn Pipeline integration, reproducible preprocessing with proper train-test split timing
 ### 🔄 In Progress
 
-**Notebook 2: Data Mastery** (Next up)
+**Notebook 3: Regression Models** (Next up)
 - Expected completion: February 2026
-- Focus: Real-world data preprocessing and feature engineering
+- Focus: Linear models, tree-based regression, and ensemble methods
 
 ---
 
@@ -180,6 +191,7 @@ Total Time: ~20-25 hours of deep learning
 
 | Date | Update |
 |------|--------|
+| **January 31, 2026** | ✅ Completed Notebook 2: Data Mastery - EDA and Preprocessing (8 sections, 20+ demonstrations) |
 | **January 30, 2026** | ✅ Completed Notebook 1: ML Foundations (11 sections, 15 visualizations) |
 | **January 28, 2026** | ✅ Completed Notebook 0: Setup & Standards |
 | **January 25, 2026** | 🎉 Repository initialized |
@@ -208,8 +220,8 @@ Built with inspiration from:
 
 *From Zero to Production-Ready ML Skills*
 
-**Last Updated:** January 30, 2026 | **Status:** 2/5 Notebooks Complete
+**Last Updated:** January 31, 2026 | **Status:** 3/6 Notebooks Complete
 
-[View Notebooks](./notebooks/) • [Report Issue](https://github.com/yourusername/ml-master-handbook/issues) • [Star ⭐](https://github.com/yourusername/ml-master-handbook)
+[View Notebooks](./notebooks/) • [Report Issue](https://github.com/haticebaydemir/ml-master-handbook/issues) • [Star ⭐](https://github.com/haticebaydemir/ml-master-handbook)
 
 </div>
