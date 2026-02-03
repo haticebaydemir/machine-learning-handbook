@@ -17,7 +17,7 @@ machine-learning-handbook/
 │   ├── 01-ML-Foundations.ipynb                           ✅ Complete
 │   ├── 02-Data-Mastery-EDA-and-Preprocessing.ipynb       ✅ Complete
 │   ├── 03-Regression-Models.ipynb                        ✅ Complete
-│   ├── 04-Classification-Models.ipynb                    ⏳ Planned
+│   ├── 04-Classification-Models.ipynb                    ✅ Complete
 │   └── 05-Advanced-ML.ipynb                              ⏳ Planned
 ├── utils/
 │   └── utils.py                                          ✅ Complete
@@ -35,7 +35,7 @@ machine-learning-handbook/
 | **1** | **ML Foundations** | ✅ Complete | What is ML, supervised/unsupervised learning, training vs inference, loss functions, bias-variance tradeoff, curse of dimensionality, No Free Lunch theorem | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/01-ml-foundations) |
 | **2** | **Data Mastery: EDA and Preprocessing** | ✅ Complete | EDA techniques, missing value handling (MCAR/MAR/MNAR), outlier detection, encoding strategies, feature scaling, feature engineering, data leakage prevention | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/02-data-mastery-eda-and-preprocessing) |
 | **3** | **Regression Models** | ✅ Complete | Linear Regression, Ridge, Lasso, ElasticNet, Decision Trees, Random Forest, Gradient Boosting (XGBoost/LightGBM/CatBoost), hyperparameter tuning, feature importance, model comparison | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/03-regression-models) |
-| **4** | **Classification Models** | ⏳ Planned | Logistic Regression, Naive Bayes, kNN, SVM, tree-based methods, ensemble classifiers, evaluation metrics (ROC-AUC, precision-recall), class imbalance handling | - |
+| **4** | **Classification Models** | ✅ Complete | Logistic Regression, Naive Bayes, kNN, SVM, Decision Trees, Random Forest, Gradient Boosting (XGBoost/LightGBM/CatBoost), ROC-AUC, precision-recall curves, class imbalance handling, hyperparameter tuning, model deployment | [View on Kaggle](https://www.kaggle.com/code/haticebaydemir/04-classification-models) |
 | **5** | **Advanced ML** | ⏳ Planned | Unsupervised learning (k-Means, DBSCAN, hierarchical clustering), dimensionality reduction (PCA, t-SNE, UMAP), ensemble methods, model interpretability (SHAP, LIME), production considerations | - |
 
 **Legend:** ✅ Complete | 🔄 In Progress | ⏳ Planned
@@ -50,7 +50,8 @@ By completing this handbook, you will:
 - ✅ **Build Production Pipelines:** Create reproducible workflows with proper train-test splits and cross-validation
 - ✅ **Compare Algorithms Systematically:** Know when to use linear models vs tree-based vs neural networks
 - ✅ **Engineer Features Effectively:** Transform raw data into model-ready datasets
-- ✅ **Interpret Models:** Use SHAP and LIME to explain black-box predictions
+- ✅ **Handle Classification Problems:** Master evaluation metrics and class imbalance techniques
+- ✅ **Interpret Models:** Understand feature importance and model decision boundaries
 - ✅ **Avoid Common Pitfalls:** Prevent data leakage, handle imbalanced classes, diagnose learning curves
 
 ---
@@ -60,7 +61,7 @@ By completing this handbook, you will:
 | Feature | Description |
 |---------|-------------|
 | **🎓 Theory + Practice** | Every concept explained with mathematical intuition AND hands-on code |
-| **📊 Visual Learning** | 15+ visualizations per notebook (learning curves, decision boundaries, etc.) |
+| **📊 Visual Learning** | 20+ visualizations per notebook (learning curves, decision boundaries, confusion matrices, etc.) |
 | **🔍 Diagnostic Focus** | Learn to diagnose underfitting, overfitting, and data issues |
 | **📚 Reference Quality** | Comprehensive tables, checklists, and decision trees for quick lookup |
 | **🏗️ Reproducible** | Fixed random seeds, modular utility functions, standardized structure |
@@ -79,7 +80,7 @@ By completing this handbook, you will:
 ```bash
 pip install numpy pandas scikit-learn matplotlib seaborn
 pip install xgboost lightgbm catboost
-pip install shap lime
+pip install imbalanced-learn shap lime
 ```
 
 ---
@@ -112,7 +113,7 @@ jupyter notebook notebooks/
 
 ## 📊 Current Status
 
-### ✅ Completed (4/6 notebooks)
+### ✅ Completed (5/6 notebooks)
 
 **Notebook 0: Setup & Standards**
 - Reproducibility configuration
@@ -137,7 +138,7 @@ jupyter notebook notebooks/
 - **Data leakage prevention:** Understanding train-test contamination, proper cross-validation practices, avoiding target leakage, time-series specific considerations
 - **Production-ready pipeline:** Step-by-step workflow from raw data to clean dataset, sklearn Pipeline integration, reproducible preprocessing with proper train-test split timing
 
-**Notebook 3: All Regression Models Explained & Compared** ⭐ *Latest*
+**Notebook 3: All Regression Models Explained & Compared**
 - **13 comprehensive sections** covering all major regression algorithms from linear models to advanced gradient boosting
 - **50+ code demonstrations** with hands-on implementation of every model type
 - **Linear Models Deep Dive:** Simple linear regression with OLS derivation, multiple linear regression with multicollinearity (VIF) analysis, Ridge (L2), Lasso (L1), and ElasticNet regularization with mathematical foundations
@@ -152,11 +153,31 @@ jupyter notebook notebooks/
 - **Production Deployment Ready:** Model serialization (joblib), scaler and feature name preservation, metadata documentation (JSON), production inference code template, deployment checklist, monitoring recommendations
 - **Key Results:** XGBoost (Tuned) achieved best performance (RMSE: $27,230, R²: 0.9033), Simple Linear Regression surprisingly competitive (4th place!), 6.15% improvement over baseline, comprehensive model selection guide
 
-### 🔄 In Progress
+**Notebook 4: Classification Models - Complete Guide** ⭐ *Latest*
+- **14 comprehensive sections** covering all major classification algorithms from linear models to advanced ensemble methods
+- **60+ code demonstrations** with complete implementation of 11+ classification algorithms
+- **Titanic Dataset:** 891 passengers, binary classification (survived/died), 14 engineered features, 80/20 train-test split with stratification
+- **Feature Engineering Excellence:** FamilySize and IsAlone from family relationships, Title extraction from names (Mr/Mrs/Miss/Master/Rare), age group binning, fare analysis by class
+- **Linear Models:** Logistic Regression with regularization (L1/L2), probability calibration, coefficient interpretation, decision boundaries
+- **Probabilistic Models:** Gaussian Naive Bayes with class priors, conditional probability analysis, feature independence assumptions
+- **Instance-Based Learning:** K-Nearest Neighbors with optimal K selection (cross-validation), distance metrics comparison (Euclidean/Manhattan), scaling importance demonstration
+- **Kernel Methods:** Support Vector Machines with multiple kernels (Linear/RBF/Polynomial), hyperparameter tuning (C and gamma), support vector analysis, decision boundary visualization
+- **Decision Trees:** CART algorithm, overfitting analysis across depths (1-20), pruning strategies (max_depth, min_samples_split, min_samples_leaf), tree visualization, feature importance
+- **Random Forest:** Bootstrap aggregating (bagging), optimal number of trees analysis (10-500), out-of-bag (OOB) scoring, individual tree diversity analysis, prediction confidence through voting
+- **Gradient Boosting:** Sequential error correction, learning rate vs n_estimators relationship, optimal tree depth for boosting (3-8), subsample effect (stochastic gradient boosting), staged predictions
+- **Advanced Boosting:** XGBoost with L1/L2 regularization, LightGBM with histogram-based learning and leaf-wise growth, CatBoost with native categorical handling and ordered boosting
+- **Evaluation Metrics Deep Dive:** Confusion matrix breakdown (TP/TN/FP/FN), accuracy vs F1-score comparison, precision-recall trade-off analysis, ROC curves and AUC scores (all models >0.85), precision-recall curves for imbalanced data, classification threshold optimization
+- **Class Imbalance Handling:** Imbalance ratio analysis (1.6:1 mild imbalance), random oversampling (duplicates minority), random undersampling (removes majority), SMOTE (synthetic minority samples), class weights (penalty adjustment), technique comparison with performance impact
+- **Hyperparameter Tuning:** Grid Search for Random Forest (3×4×3×3×2 = 216 combinations, 5-fold CV, 1080 total fits), Random Search for XGBoost (50 iterations, 250 total fits, 27x faster), parameter impact analysis, optimal hyperparameter selection
+- **Model Comparison Framework:** 11 algorithms compared systematically, 5-fold stratified cross-validation for robust evaluation, multiple metrics (Accuracy/Precision/Recall/F1/AUC), learning curves for bias-variance diagnosis, confusion matrices for all models
+- **Production Deployment:** Model serialization (pickle), preprocessing pipeline preservation, model card documentation, production inference code, deployment checklist, monitoring recommendations, maintenance guidelines
+- **Key Results:** Random Forest (Tuned) best F1-Score (0.8030), CatBoost best cross-validation (0.7725 ± 0.033), ensemble methods dominated top 5 ranks, all top models achieved >80% accuracy and >0.85 AUC
 
-**Notebook 4: Classification Models** (Next up)
+### ⏳ Upcoming
+
+**Notebook 5: Advanced ML** (Next up)
 - Expected completion: February 2026
-- Focus: Binary and multi-class classification algorithms
+- Focus: Unsupervised learning, dimensionality reduction, model interpretability
 
 ---
 
@@ -182,11 +203,11 @@ Notebook 2: Data Mastery (3-4 hours)
     ↓
 Notebook 3: Regression Models (4-6 hours)
     ↓
-Notebook 4: Classification Models (3-4 hours)
+Notebook 4: Classification Models (5-7 hours)
     ↓
 Notebook 5: Advanced ML (4-5 hours)
     ↓
-Total Time: ~20-28 hours of deep learning
+Total Time: ~23-32 hours of deep learning
 ```
 
 **Recommendation:** Complete one notebook per week for thorough understanding.
@@ -207,6 +228,7 @@ Total Time: ~20-28 hours of deep learning
 
 | Date | Update |
 |------|--------|
+| **February 3, 2026** | ✅ Completed Notebook 4: Classification Models (14 sections, 60+ demonstrations, 11 algorithms compared) |
 | **January 31, 2026** | ✅ Completed Notebook 3: All Regression Models (13 sections, 50+ demonstrations, 12 models compared) |
 | **January 30, 2026** | ✅ Completed Notebook 2: Data Mastery - EDA and Preprocessing (10 sections, 35+ demonstrations) |
 | **January 29, 2026** | ✅ Completed Notebook 1: ML Foundations (11 sections, 15 visualizations) |
@@ -239,7 +261,7 @@ Built with inspiration from:
 
 *From Zero to Production-Ready ML Skills*
 
-**Last Updated:** January 31, 2026 | **Status:** 4/6 Notebooks Complete
+**Last Updated:** February 3, 2026 | **Status:** 5/6 Notebooks Complete (83% Complete)
 
 [View Notebooks](./notebooks/) • [Report Issue](https://github.com/haticebaydemir/ml-master-handbook/issues) • [Star ⭐](https://github.com/haticebaydemir/ml-master-handbook)
 
