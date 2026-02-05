@@ -13,7 +13,7 @@ A comprehensive machine learning handbook covering supervised learning, unsuperv
 
 This repository contains 6 Jupyter notebooks that systematically cover machine learning from fundamentals to production deployment. Each notebook builds on previous concepts and uses real-world datasets.
 
-**Time commitment:** ~25-35 hours total
+**Time commitment:** 
 
 ---
 
@@ -38,8 +38,7 @@ machine-learning-handbook/
 ## Notebooks
 
 ### Notebook 0: Setup & Standards
-**Status:** Complete | **Time:** 30 minutes
-
+**Status:** Complete 
 Environment configuration, random seed management, and utility functions.
 
 **Topics:**
@@ -53,7 +52,7 @@ Environment configuration, random seed management, and utility functions.
 ---
 
 ### Notebook 1: ML Foundations  
-**Status:** Complete | **Time:** 2-3 hours
+**Status:** Complete 
 
 Core machine learning concepts and theoretical foundations.
 
@@ -73,7 +72,7 @@ Core machine learning concepts and theoretical foundations.
 ---
 
 ### Notebook 2: Data Mastery - EDA and Preprocessing
-**Status:** Complete | **Time:** 3-4 hours
+**Status:** Complete 
 
 Data preprocessing pipeline from raw data to model-ready format.
 
@@ -93,7 +92,7 @@ Data preprocessing pipeline from raw data to model-ready format.
 ---
 
 ### Notebook 3: Regression Models
-**Status:** Complete | **Time:** 4-6 hours
+**Status:** Complete 
 
 Comprehensive coverage of regression algorithms with implementation and comparison.
 
@@ -116,7 +115,7 @@ Comprehensive coverage of regression algorithms with implementation and comparis
 ---
 
 ### Notebook 4: Classification Models
-**Status:** Complete | **Time:** 5-7 hours
+**Status:** Complete 
 
 Classification algorithms with focus on evaluation metrics and class imbalance.
 
@@ -142,7 +141,7 @@ Classification algorithms with focus on evaluation metrics and class imbalance.
 ---
 
 ### Notebook 5: Advanced ML - Unsupervised Learning, Ensembles & Production
-**Status:** Complete | **Time:** 5-7 hours
+**Status:** Complete 
 
 Advanced topics including unsupervised learning, ensemble methods, interpretability, and production deployment.
 
@@ -239,7 +238,7 @@ jupyter notebook notebooks/
 | 4 | Classification Models | ✅ Complete | 11 classification algorithms | 5-7 hours |
 | 5 | Advanced ML & Production | ✅ Complete | Unsupervised, ensembles, interpretability, deployment | 5-7 hours |
 
-**Total:** 6/6 notebooks complete | ~25-35 hours
+**Total:** 6/6 notebooks complete 
 
 ---
 
